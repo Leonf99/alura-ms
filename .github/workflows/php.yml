@@ -26,10 +26,10 @@ jobs:
 
     - name: Install Composer dependencies
       run: |
-        cd academico-php
-        composer install --prefer-dist --no-progress --no-suggest
+        cd /home/albertoleon/Documentos/ALURA/alura-ms/academico-php
+        composer install --prefer-dist
 
     - name: PHPCS
       run: |
-        cd academico-php
+        cd /home/albertoleon/Documentos/ALURA/alura-ms/academico-php
         composer run phpcs
