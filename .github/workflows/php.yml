@@ -27,6 +27,7 @@ jobs:
     - name: Install Composer dependencies
       run: |
         cd $GITHUB_WORKSPACE/academico-php
+        ls -la     # Lista os arquivos no diretório para verificar a presença do composer.json
         composer install --prefer-dist
 
     - name: PHPCS
