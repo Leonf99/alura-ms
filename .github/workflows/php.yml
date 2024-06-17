@@ -26,10 +26,10 @@ jobs:
 
     - name: Install Composer dependencies
       run: |
-        cd /home/albertoleon/Documentos/ALURA/alura-ms/academico-php
+        cd $GITHUB_WORKSPACE/academico-php
         composer install --prefer-dist
 
     - name: PHPCS
       run: |
-        cd /home/albertoleon/Documentos/ALURA/alura-ms/academico-php
+        cd $GITHUB_WORKSPACE/academico-php
         composer run phpcs
