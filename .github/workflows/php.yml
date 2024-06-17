@@ -15,12 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Composer Install
-      uses: php-actions/composer@v6
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
       with:
-        php_extensions: sockets pdo_pgsql
+        php-version: 'latest'
+        extensions: sockets pdo_pgsql
+
+    - name: Install Composer dependencies
+      run: |
+        cd academico-php
+        composer install --prefer-dist --no-progress --no-suggest
 
     - name: PHPCS
-      run: composer run phpcs
+      run: |
+        cd academico-php
+        composer run phpcs
