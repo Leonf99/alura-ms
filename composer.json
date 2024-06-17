@@ -1,0 +1,16 @@
+{
+    "name": "alura/alura-ms",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Alura\\AluraMs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alberto Leon",
+            "email": "albertojleonf99@gmail.com"
+        }
+    ],
+    "require": {}
+}
